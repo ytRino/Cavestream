@@ -1,3 +1,6 @@
-[submodule "module/Volley"]
-	path = module/Volley
+[submodule "modules/Volley"]
+	path = modules/Volley
 	url = https://android.googlesource.com/platform/frameworks/volley
+[submodule "modules/Vitamio"]
+	path = modules/Vitamio
+	url = https://github.com/ytRino/VitamioBundle.git

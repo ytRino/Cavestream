@@ -1,2 +1,3 @@
 include ':CaveStream'
-include ':module:Volley'
+include ':modules:Volley'
+include 'modules:Vitamio', 'modules:Vitamio:vitamio'

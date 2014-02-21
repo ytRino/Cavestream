@@ -1,3 +1,6 @@
+//evaluationDependsOn(':modules:Volley')
+evaluationDependsOn(':modules:Vitamio')
+
 apply plugin: 'android'
 
 android {
@@ -20,8 +23,9 @@ android {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:+'
-    compile 'com.android.support:support-v4:+'
+    compile 'com.android.support:support-v4:19.0.0'
     compile fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
 
-    compile project(':module:Volley')
+    compile project(':modules:Volley')
+    compile project(':modules:Vitamio:vitamio')
 }

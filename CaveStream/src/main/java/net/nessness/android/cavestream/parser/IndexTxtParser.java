@@ -30,12 +30,15 @@ public class IndexTxtParser extends ChannelParser {
     private static Channel parseLine(String line) {
         String[] data = line.split("<>");
         Log.v(TAG, line + " @ " + data.length);
-        for (String s : data) {
-            Log.v(TAG, s);
+        for (int i = 0, dataLength = data.length; i < dataLength; i++) {
+            String s = data[i];
+            Log.v(TAG, i + ": " + s);
         }
 
         IndexTxtChannel ch = new IndexTxtChannel();
         ch.setName(data[0]);
+        ch.setId(data[1]);
+        ch.setIp(data[2]);
         ch.setUrl(data[3]);
         ch.setGenre(data[4]);
         ch.setDescription(data[5]);

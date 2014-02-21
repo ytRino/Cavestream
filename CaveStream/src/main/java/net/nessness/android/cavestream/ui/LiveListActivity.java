@@ -104,6 +104,9 @@ public class LiveListActivity extends ActionBarActivity
     @Override
     public void onChannelSelected(Channel channel) {
         Toast.makeText(self, channel.getName() + " selected!", Toast.LENGTH_SHORT).show();
-
+        startActivity(new Intent(self, ViewerActivity.class)
+                .putExtra(ViewerActivity.EXTRA_NAME, channel.getName())
+                .putExtra(ViewerActivity.EXTRA_URL, channel.getId())
+                .putExtra(ViewerActivity.EXTRA_SERVER, channel.getIp()));
     }
 }
